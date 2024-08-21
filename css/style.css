@@ -232,11 +232,13 @@ footer {
   }
 
   .portfolio-item {
-    flex: 1 1 calc(50% - 10px); /* 2 items per row with a gap */
+    flex: 1 1 calc(60% - 10px); 
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content */
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .portfolio-item img {
@@ -309,7 +311,9 @@ footer {
   }
 
   .portfolio-item {
-    flex: 1 1 calc(50% - 10px); /* 2 items per row */
+    flex: 1 1 calc(50% - 30px); /* 2 items per row */
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .skills-list {
