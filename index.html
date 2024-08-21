@@ -6,18 +6,10 @@
     <title>Christiana Hatagan</title>
     <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Include the custom font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
   </head>
   <body>
     <header id="title">
@@ -25,7 +17,7 @@
         <h1>
           <a href="#"> CHRISTIANA HATAGAN</a>
         </h1>
-        <ul class="topnav">
+        <ul class="navigation-menu">
           <li><a href="index.html">HOME</a></li>
           <li><a href="#portfolio">PORTFOLIO</a></li>
           <li><a href="#skills">SKILLS</a></li>
@@ -33,101 +25,94 @@
         </ul>
       </nav>
     </header>
-    <section class="comforta">
+    <section class="biography-section">
       <div id="bio">
         <img src="images/christiana.jpg" alt="Christiana's picture" />
         <p>
-          Hello you! I am second year student at University Babes Bolyai Cluj-Napoca, Faculty of Mathematics and Informatics, profile Artificial Inteligence. I am hardworking and am now focusing on 
-          growing better at Web Designing, as I hope to further get into this part of the IT industry. 
+          Hello you! I am a second-year student at University Babes Bolyai Cluj-Napoca, Faculty of Mathematics and Informatics, profile Artificial Intelligence. I am hardworking and am now focusing on growing better at Web Designing, as I hope to further get into this part of the IT industry.
         </p>
       </div>
     </section>
-    <main class="fond2">
+    <main class="portfolio-section">
       <section id="portfolio">
         <h2>Portfolio</h2>
       </section>
-      <div class="container">
-        <div class="col port1">
+      <div class="portfolio-container">
+        <div class="portfolio-item">
+          <article>
+            <h3>Calculator</h3>
+            <img
+              src="images/portfolio-6.png"
+              alt="image of a calculator"
+              class="portfolio-image"
+            />
+            <p>
+              Someone can enter the numbers they want, press the big blue button, and get the result.
+            </p>
+          </article>
+        </div>
+        <div class="portfolio-item">
+          <article>
+            <h3>Photo Gallery</h3>
+            <img
+              src="images/portfolio-5.png"
+              alt="image of a photo gallery"
+              class="portfolio-image"
+            />
+            <p>
+              This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.
+            </p>
+          </article>
+        </div>
+        <div class="portfolio-item">
+          <article>
+            <h3>Map Of Favorite Spots</h3>
+            <img
+              src="images/portfolio-4.png"
+              alt="image of a map"
+              class="portfolio-image"
+            />
+            <p>
+              This project uses mapping APIs to plot points for my favorite spots in the city for a do-it-yourself walking tour.
+            </p>
+          </article>
+        </div>
+        <div class="portfolio-item">
+          <article>
+            <h3>Travel App</h3>
+            <img
+              src="images/portfolio-3.png"
+              alt="image of a travel app"
+              class="portfolio-image"
+            />
+            <p>
+              This project compares travel times based on different transportation methods and tells you the best one.
+            </p>
+          </article>
+        </div>
+        <div class="portfolio-item">
+          <article>
+            <h3>Search Page</h3>
+            <img
+              src="images/portfolio-2.png"
+              alt="image of a search page"
+              class="portfolio-image"
+            />
+            <p>
+              This project searches through a specific database to find the information that the user is trying to look up.
+            </p>
+          </article>
+        </div>
+        <div class="portfolio-item">
           <article>
             <h3>Marketing Page</h3>
             <img
               src="images/portfolio-1.png"
-              alt="marketing photo"
-              class="imagine1"
+              alt="image of a marketing page"
+              class="portfolio-image"
             />
             <p>
-              This project represent the front page of a marketing website meant
-              for a specific buisness
-            </p>
-          </article>
-        </div>
-        <div class="col port2">
-          <article>
-            <h3>Search Page</h3>
-            <img
-              class="imagine2"
-              src="images/portfolio-2.png"
-              alt="image of an search page"
-            />
-            <p>
-              This project searches through a specific database to find
-              information that the user is trying to look up
-            </p>
-          </article>
-        </div>
-        <div class="col port3">
-          <article>
-            <h3>Travel App</h3>
-            <img
-              class="imagine3"
-              src="images/portfolio-3.png"
-              alt="image of an search page"
-            />
-            <p>
-              This project compares travel times based on different
-              transportation methods and tells you the best one
-            </p>
-          </article>
-        </div>
-        <div class="col port4">
-          <article>
-            <h3>Map Of Favorite Spots</h3>
-            <img
-              class="imagine4"
-              src="images/portfolio-4.png"
-              alt="image of an search page"
-            />
-            <p>
-              This project uses mapping apis to plot points for my favorite
-              spots in the city for a do-it-yourself walking tour.
-            </p>
-          </article>
-        </div>
-        <div class="col port5">
-          <article>
-            <h3>Photo Gallery</h3>
-            <img
-              class="imagine5"
-              src="images/portfolio-5.png"
-              alt="image of an search page"
-            />
-            <p>
-              This project shows pictures from a recent trip to viewer and
-              allows them to easily navigate through photos.
-            </p>
-          </article>
-        </div>
-        <div class="col port6">
-          <article>
-            <h3>Calculator</h3>
-            <img
-              class="imagine6"
-              src="images/portfolio-6.png"
-              alt="image of an calculator"
-            />
-            <p>
-              Someone can enter in the numbers they want, and press the big blue
-              button and get the result.
+              This project represents the front page of a marketing website meant for a specific business.
             </p>
           </article>
         </div>
@@ -135,8 +120,8 @@
       <section id="skills">
         <h2>Skills</h2>
       </section>
-      <div class="container-1">
-        <ul class="skills">
+      <div class="skills-container">
+        <ul class="skills-list">
           <li>HTML</li>
           <li>CSS</li>
           <li>PYTHON</li>
@@ -148,10 +133,9 @@
       <section id="contact">
         <h2>Contact</h2>
       </section>
-      <div class="container-2">
+      <div class="contact-container">
         <p>
-          If you like what I do and want to stay in touch, feel free to reach
-          out by:
+          If you like what I do and want to stay in touch, feel free to reach out by:
         </p>
         <ul>
           <li><b>Phone: </b></li>
@@ -164,17 +148,17 @@
       </div>
     </main>
     <footer>
-      <h3 class="footname">Christiana Hatagan</h3>
-      <a class="backtop" href="#top">Back to top &raquo;</a>
-      <ul class="footer-nav">
+      <h3 class="footer-name">Christiana Hatagan</h3>
+      <a class="back-to-top" href="#top">Back to top &raquo;</a>
+      <ul class="footer-navigation">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#portfolio">Portofolio</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </footer>
     <footer class="main-footer">
-      <p>&copy;Project Developed By <a href="#">Christiana Hatagan</a>.</p>
+      <p>&copy; Project Developed By <a href="#">Christiana Hatagan</a>.</p>
     </footer>
   </body>
 </html>
