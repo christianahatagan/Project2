@@ -6,7 +6,6 @@
 /* Main Styles */
 body {
   margin: 0 auto;
-  max-width: 1024px;
   text-align: center;
   background-color: #ffe4e9; /* Barbie pink background */
 }
@@ -50,6 +49,10 @@ header h1 a {
 
 .navigation-menu a:hover {
   color: #ff91bb; /* Darker Barbie pink */
+}
+
+.navigation-menu a:visited {
+  color: purple; /*  Basic Purple */
 }
 
 /* Biography Section */
@@ -159,6 +162,10 @@ header h1 a {
   color: #ff91bb; /* Darker Barbie pink */
 }
 
+.contact-container a:visited {
+  color: purple; /*  Basic Purple */
+}
+
 /* Footer */
 footer {
   width: 100%;
@@ -192,6 +199,10 @@ footer {
 
 .footer-navigation a:hover {
   color: #ff91bb; /* Darker Barbie pink */
+}
+
+.footer-navigation a:visited {
+  color: purple; /* Basic Purple*/
 }
 
 .main-footer {
@@ -232,7 +243,7 @@ footer {
   }
 
   .portfolio-item {
-    flex: 1 1 calc(60% - 10px); 
+    flex: 1 1 calc(70% - 10px); 
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -327,5 +338,49 @@ footer {
 
   .footer-navigation {
     flex-direction: column;
+  }
+}
+
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  body {
+    max-width: 1024px;
+  }
+
+  .biography-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .biography-section img {
+    margin-bottom: 1rem;
+    width: 35%;
+  }
+
+  .portfolio-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-item {
+    flex: 1 1 calc(30% - 20px); /* 3 items per row */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .skills-list {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+
+  .skills-list li {
+    margin: 0 10px;
+  }
+
+  .footer-navigation {
+    flex-direction: row;
+    justify-content: center;
   }
 }
