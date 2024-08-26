@@ -169,12 +169,18 @@ header h1 a {
 
 /* Footer */
 footer {
-  width: 100%;
-  font-weight: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
-  text-align:center;
-  background-color: #ffb3d9; /* Light Barbie pink */
+  background-color: #ffb3d9;
   border-top: 2px solid #ff69b4;
+}
+
+.footer-name {
+  margin-right: auto; /* Pushes navigation to the right */
+  font-weight: bold;
+  color: #ff69b4;
 }
 
 .footer-navigation {
@@ -261,7 +267,7 @@ footer {
 
   .footer-navigation {
     flex-direction: row;
-    justify-content: center; /* Align footer links horizontally */
+    justify-content: flex-end; /* Align footer links horizontally */
   }
 }
 
