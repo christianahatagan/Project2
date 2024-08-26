@@ -22,6 +22,7 @@ header {
 
 header nav {
   display: flex;
+  flex-direction: column;
   justify-content: space-between; /* Space out the brand name and nav items */
   align-items: center; /* Align items vertically in the center */
   padding: 1rem;
@@ -44,6 +45,7 @@ header h1 a {
   list-style: none;
   display: flex;
   justify-content: flex-end; /* Ensure the navigation is on the right */
+  flex-direction: column;
   padding: 0;
   margin: 0;
 }
@@ -221,50 +223,8 @@ footer {
   color: #ff69b4; /* Hot pink */
 }
 
-@media (min-width: 320px) {
-  header nav {
-    flex-direction: column; /* Schimbă direcția de la rând la coloană */
-    align-items: center; /* Aliniază elementele la centru */
-    text-align: center; /* Textul centrat */
-  }
-
-  .navigation-menu {
-    flex-direction: column; /* Schimbă navigația în coloană */
-    width: 100%; /* Asigură-te că meniul ocupă întreaga lățime */
-  }
-
-  .navigation-menu li {
-    margin: 10px 0; /* Spațiu între elementele din meniu */
-  }
-
-  header h1 {
-    margin-bottom: 20px; /* Spațiu între titlu și meniul de navigare */
-  }
-
-  .biography-section {
-    flex-direction: row; /* Stack the elements */
-  }
-
-  .portfolio-container {
-    flex-direction: column; /* Stack portfolio items vertically */
-  }
-
-  .skills-list {
-    flex-direction: column; /* Stack skills vertically */
-  }
-
-  .footer-navigation {
-    flex-direction: column; /* Stack footer links vertically */
-  }
-
-  /* Footer Adjustments */
-  .footer-navigation li:not(:first-child) {
-    display: none; /* Ascunde toate linkurile în afară de primul */
-  }
-
-  .footer-navigation li:first-child {
-    margin-top: 10px; /* Asigură un mic spațiu între nume și link-ul "Home" */
-  }
+.footer-bar{
+  display: none;
 }
 
 
@@ -272,6 +232,8 @@ footer {
   body {
       max-width: 768px;
   }
+
+  
 
   header nav {
     flex-direction: column; /* Numele și meniul vor fi aranjate pe verticală */
@@ -303,17 +265,38 @@ footer {
   }
 
 
+  /* Biography Section */
   .biography-section {
-      flex-direction: row-reverse; /* Image on the right, text on the left */
-      text-align: left; /* Align text to the left */
+    padding: 1.5rem;
+    margin: 2rem auto;
+    background-color: #ffccde; /* Soft Barbie pink */
+    border: 2px solid #ff69b4;
+    border-radius: 1rem;
+    overflow: hidden; /* Clear floats */
+    text-align: left; /* Align text to the left */
+    max-width: 900px; /* Optional: Set a max-width for better control */
   }
 
   .biography-section img {
-      width: 40%; /* Adjust image size */
-      margin-left: 20px; /* Add margin to the left of the image */
-      margin-right: 0; /* Remove margin on the right */
+    width: 40%; /* Adjust image size */
+    max-width: 300px; /* Adjust as needed */
+    border: 2px solid #ff69b4;
+    border-radius: 50%;
+    float: right; /* Float the image to the right */
+    margin-left: 20px; /* Space between text and image */
+    margin-bottom: 20px; /* Space below the image */
   }
 
+  .biography-section p {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: left; /* Align text to the left */
+    clear: both; /* Ensure that text below the image starts below it */
+  }
+
+  .biography-section p:first-of-type {
+    clear: none; /* Make sure the first paragraph wraps around the image */
+  }
   .portfolio-container {
       flex-direction: row;
       flex-wrap: wrap; /* Wrap items to new lines */
@@ -332,23 +315,68 @@ footer {
       flex-direction: row;
       justify-content: flex-end; /* Align footer links horizontally */
   }
+
+  .back-to-top{
+    display: none;
+  }
+
+  
+  .footer-bar{
+  display: flex;
+  }
 }
 
 
 @media (min-width: 1024px) {
+  header nav {
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-between; /* Space between the h1 and navigation menu */
+  }
+
+  header h1 {
+    font-size: 1.5rem; /* Adjust font size if needed */
+    margin-right: 20px; /* Optional: Add spacing between h1 and navigation */
+  }
+
+  .navigation-menu {
+    justify-content: flex-end; /* Ensure the navigation stays on the right */
+  }
+
   body {
     max-width: 1024px;
   }
 
+    /* Biography Section */
   .biography-section {
-    padding: 2rem;
-    flex-direction: row-reverse; /* Image on the right, text on the left */
+    padding: 1.5rem;
+    margin: 2rem auto;
+    background-color: #ffccde; /* Soft Barbie pink */
+    border: 2px solid #ff69b4;
+    border-radius: 1rem;
+    overflow: hidden; /* Clear floats */
+    text-align: left; /* Align text to the left */
+    max-width: 900px; /* Optional: Set a max-width for better control */
   }
 
   .biography-section img {
-    width: 30%; /* Adjust image size */
-    margin-left: 20px; /* Add margin to the left of the image */
-    margin-right: 0; /* Remove margin on the right */
+    width: 40%; /* Adjust image size */
+    max-width: 300px; /* Adjust as needed */
+    border: 2px solid #ff69b4;
+    border-radius: 50%;
+    float: right; /* Float the image to the right */
+    margin-left: 20px; /* Space between text and image */
+    margin-bottom: 20px; /* Space below the image */
+  }
+
+  .biography-section p {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: left; /* Align text to the left */
+    clear: both; /* Ensure that text below the image starts below it */
+  }
+
+  .biography-section p:first-of-type {
+    clear: none; /* Make sure the first paragraph wraps around the image */
   }
 
   .portfolio-item {
@@ -358,4 +386,13 @@ footer {
   .skills-list {
     justify-content: space-between; /* Distribute space between skills */
   }
+  
+  .back-to-top{
+    display: none;
+  }
+
+  
+ .footer-bar{
+  display: flex;
+ }
 } 
