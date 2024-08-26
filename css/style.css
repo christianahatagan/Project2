@@ -4,11 +4,15 @@
 }
 
 /* Main Styles */
+a{
+  text-decoration: none;
+}
+
 body {
   margin: 0 auto;
+  max-width: 1024px;
   text-align: center;
   background-color: #ffe4e9; /* Barbie pink background */
-  max-width: 100%; /* Allow full width on mobile */
 }
 
 header {
@@ -218,6 +222,25 @@ footer {
 }
 
 @media (min-width: 320px) {
+  header nav {
+    flex-direction: column; /* Schimbă direcția de la rând la coloană */
+    align-items: center; /* Aliniază elementele la centru */
+    text-align: center; /* Textul centrat */
+  }
+
+  .navigation-menu {
+    flex-direction: column; /* Schimbă navigația în coloană */
+    width: 100%; /* Asigură-te că meniul ocupă întreaga lățime */
+  }
+
+  .navigation-menu li {
+    margin: 10px 0; /* Spațiu între elementele din meniu */
+  }
+
+  header h1 {
+    margin-bottom: 20px; /* Spațiu între titlu și meniul de navigare */
+  }
+
   .biography-section {
     flex-direction: row; /* Stack the elements */
   }
@@ -233,43 +256,84 @@ footer {
   .footer-navigation {
     flex-direction: column; /* Stack footer links vertically */
   }
+
+  /* Footer Adjustments */
+  .footer-navigation li:not(:first-child) {
+    display: none; /* Ascunde toate linkurile în afară de primul */
+  }
+
+  .footer-navigation li:first-child {
+    margin-top: 10px; /* Asigură un mic spațiu între nume și link-ul "Home" */
+  }
 }
+
 
 @media (min-width: 768px) {
   body {
-    max-width: 768px;
+      max-width: 768px;
   }
 
+  header nav {
+    flex-direction: column; /* Numele și meniul vor fi aranjate pe verticală */
+    align-items: center; /* Elemente centrate */
+    text-align: center; /* Textul centrat */
+  }
+
+
+  .navigation-menu {
+    display: flex; /* Asigură că link-urile sunt afișate pe o singură linie */
+    justify-content: center; /* Centrează link-urile sub nume */
+    flex-direction: row;
+    width: 100%; /* Asigură că link-urile ocupă toată lățimea */
+    margin: 0; /* Elimină orice margini */
+  }
+
+  .navigation-menu li {
+    margin: 0 15px; /* Spațiu între link-uri */
+  }
+
+  /* Elimina elementele non-esentiale */
+  .navigation-menu li:nth-child(4) { 
+    display: inline-block; /* Asigură că link-urile sunt pe o singură linie */
+  }
+
+/* Removes right margin on the last navigation item for alignment purposes */
+  .navigation-menu li:last-child {
+    margin-right: 0;
+  }
+
+
   .biography-section {
-    flex-direction: row-reverse; /* Image on the right, text on the left */
-    text-align: left; /* Align text to the left */
+      flex-direction: row-reverse; /* Image on the right, text on the left */
+      text-align: left; /* Align text to the left */
   }
 
   .biography-section img {
-    width: 40%; /* Adjust image size */
-    margin-left: 20px; /* Add margin to the left of the image */
-    margin-right: 0; /* Remove margin on the right */
+      width: 40%; /* Adjust image size */
+      margin-left: 20px; /* Add margin to the left of the image */
+      margin-right: 0; /* Remove margin on the right */
   }
 
   .portfolio-container {
-    flex-direction: row;
-    flex-wrap: wrap; /* Wrap items to new lines */
+      flex-direction: row;
+      flex-wrap: wrap; /* Wrap items to new lines */
   }
 
   .portfolio-item {
-    flex: 1 1 calc(50% - 20px); /* Two items per row */
+      flex: 1 1 calc(50% - 20px); /* Two items per row */
   }
 
   .skills-list {
-    flex-direction: row;
-    justify-content: space-around; /* Align skills horizontally */
+      flex-direction: row;
+      justify-content: space-around; /* Align skills horizontally */
   }
 
   .footer-navigation {
-    flex-direction: row;
-    justify-content: flex-end; /* Align footer links horizontally */
+      flex-direction: row;
+      justify-content: flex-end; /* Align footer links horizontally */
   }
 }
+
 
 @media (min-width: 1024px) {
   body {
