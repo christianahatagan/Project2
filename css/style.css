@@ -171,10 +171,8 @@ header h1 a {
 footer {
   width: 100%;
   font-weight: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 1rem;
+  text-align:center;
   background-color: #ffb3d9; /* Light Barbie pink */
   border-top: 2px solid #ff69b4;
 }
@@ -182,14 +180,14 @@ footer {
 .footer-navigation {
   list-style: none;
   padding: 0;
-  margin: 10px 0;
+  margin:  0;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .footer-navigation li {
-  margin: 5px 0;
+  margin: 0 10px;
 }
 
 .footer-navigation a {
@@ -215,7 +213,7 @@ footer {
 
 @media (min-width: 320px) {
   .biography-section {
-    flex-direction: column; /* Stack the elements */
+    flex-direction: row; /* Stack the elements */
   }
 
   .portfolio-container {
@@ -237,13 +235,14 @@ footer {
   }
 
   .biography-section {
-    flex-direction: row; /* Place image and text side by side */
+    flex-direction: row-reverse; /* Image on the right, text on the left */
     text-align: left; /* Align text to the left */
   }
 
   .biography-section img {
     width: 40%; /* Adjust image size */
-    margin-right: 20px; /* Add margin to the right of the image */
+    margin-left: 20px; /* Add margin to the left of the image */
+    margin-right: 0; /* Remove margin on the right */
   }
 
   .portfolio-container {
@@ -266,7 +265,6 @@ footer {
   }
 }
 
-
 @media (min-width: 1024px) {
   body {
     max-width: 1024px;
@@ -274,11 +272,13 @@ footer {
 
   .biography-section {
     padding: 2rem;
-    flex-direction: row; /* Image on the left, text on the right */
+    flex-direction: row-reverse; /* Image on the right, text on the left */
   }
 
   .biography-section img {
     width: 30%; /* Adjust image size */
+    margin-left: 20px; /* Add margin to the left of the image */
+    margin-right: 0; /* Remove margin on the right */
   }
 
   .portfolio-item {
@@ -288,4 +288,4 @@ footer {
   .skills-list {
     justify-content: space-between; /* Distribute space between skills */
   }
-}
+} 
